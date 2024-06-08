@@ -10,9 +10,12 @@
 		C64D62532C14B8EF001A0E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62522C14B8EF001A0E36 /* AppDelegate.swift */; };
 		C64D62552C14B8EF001A0E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */; };
 		C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62562C14B8EF001A0E36 /* ViewController.swift */; };
-		C64D625A2C14B8EF001A0E36 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C64D62592C14B8EF001A0E36 /* Base */; };
 		C64D625C2C14B8F0001A0E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64D625B2C14B8F0001A0E36 /* Assets.xcassets */; };
 		C64D625F2C14B8F0001A0E36 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C64D625E2C14B8F0001A0E36 /* Base */; };
+		C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62672C14BAC1001A0E36 /* Zodiac.swift */; };
+		C64D626B2C14BAD3001A0E36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626A2C14BAD3001A0E36 /* SnapKit */; };
+		C64D626D2C14BAD3001A0E36 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */; };
+		C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D626E2C14BC1D001A0E36 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,11 @@
 		C64D62522C14B8EF001A0E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C64D62562C14B8EF001A0E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C64D62592C14B8EF001A0E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C64D625B2C14B8F0001A0E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64D625E2C14B8F0001A0E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C64D62602C14B8F0001A0E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64D62672C14BAC1001A0E36 /* Zodiac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
+		C64D626E2C14BC1D001A0E36 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64D626B2C14BAD3001A0E36 /* SnapKit in Frameworks */,
+				C64D626D2C14BAD3001A0E36 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,48 @@
 		C64D62512C14B8EF001A0E36 /* Challange-Module-9-Layout */ = {
 			isa = PBXGroup;
 			children = (
-				C64D62522C14B8EF001A0E36 /* AppDelegate.swift */,
-				C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */,
-				C64D62562C14B8EF001A0E36 /* ViewController.swift */,
-				C64D62582C14B8EF001A0E36 /* Main.storyboard */,
-				C64D625B2C14B8F0001A0E36 /* Assets.xcassets */,
-				C64D625D2C14B8F0001A0E36 /* LaunchScreen.storyboard */,
+				C64D62712C14C964001A0E36 /* Support */,
+				C64D62662C14BAA0001A0E36 /* Model */,
+				C64D62702C14C95A001A0E36 /* Screens */,
+				C64D62722C14C978001A0E36 /* Resources */,
 				C64D62602C14B8F0001A0E36 /* Info.plist */,
 			);
 			path = "Challange-Module-9-Layout";
+			sourceTree = "<group>";
+		};
+		C64D62662C14BAA0001A0E36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C64D62672C14BAC1001A0E36 /* Zodiac.swift */,
+				C64D626E2C14BC1D001A0E36 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C64D62702C14C95A001A0E36 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C64D625D2C14B8F0001A0E36 /* LaunchScreen.storyboard */,
+				C64D62562C14B8EF001A0E36 /* ViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C64D62712C14C964001A0E36 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */,
+				C64D62522C14B8EF001A0E36 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C64D62722C14C978001A0E36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C64D625B2C14B8F0001A0E36 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,10 @@
 			dependencies = (
 			);
 			name = "Challange-Module-9-Layout";
+			packageProductDependencies = (
+				C64D626A2C14BAD3001A0E36 /* SnapKit */,
+				C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */,
+			);
 			productName = "Challange-Module-9-Layout";
 			productReference = C64D624F2C14B8EF001A0E36 /* Challange-Module-9-Layout.app */;
 			productType = "com.apple.product-type.application";
@@ -102,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "Challange-Module-9-Layout" */;
+			buildConfigurationList = C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "Challange-ZodiacSign-Layout" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = C64D62462C14B8EF001A0E36;
+			packageReferences = (
+				C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C64D62502C14B8EF001A0E36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +173,6 @@
 			files = (
 				C64D625C2C14B8F0001A0E36 /* Assets.xcassets in Resources */,
 				C64D625F2C14B8F0001A0E36 /* Base in Resources */,
-				C64D625A2C14B8EF001A0E36 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */,
 				C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */,
+				C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */,
 				C64D62532C14B8EF001A0E36 /* AppDelegate.swift in Sources */,
 				C64D62552C14B8EF001A0E36 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +194,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C64D62582C14B8EF001A0E36 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C64D62592C14B8EF001A0E36 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C64D625D2C14B8F0001A0E36 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +336,6 @@
 				INFOPLIST_FILE = "Challange-Module-9-Layout/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +363,6 @@
 				INFOPLIST_FILE = "Challange-Module-9-Layout/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "Challange-Module-9-Layout" */ = {
+		C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "Challange-ZodiacSign-Layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C64D62612C14B8F0001A0E36 /* Debug */,
@@ -363,6 +400,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C64D626A2C14BAD3001A0E36 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C64D62472C14B8EF001A0E36 /* Project object */;
 }
