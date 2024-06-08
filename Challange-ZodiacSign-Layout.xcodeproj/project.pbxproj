@@ -46,7 +46,7 @@
 		C64D62462C14B8EF001A0E36 = {
 			isa = PBXGroup;
 			children = (
-				C64D62512C14B8EF001A0E36 /* Challange-Module-9-Layout */,
+				C64D62512C14B8EF001A0E36 /* Challange-ZodiacSign-Layout */,
 				C64D62502C14B8EF001A0E36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,7 +59,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C64D62512C14B8EF001A0E36 /* Challange-Module-9-Layout */ = {
+		C64D62512C14B8EF001A0E36 /* Challange-ZodiacSign-Layout */ = {
 			isa = PBXGroup;
 			children = (
 				C64D62712C14C964001A0E36 /* Support */,
@@ -68,7 +68,7 @@
 				C64D62722C14C978001A0E36 /* Resources */,
 				C64D62602C14B8F0001A0E36 /* Info.plist */,
 			);
-			path = "Challange-Module-9-Layout";
+			path = "Challange-ZodiacSign-Layout";
 			sourceTree = "<group>";
 		};
 		C64D62662C14BAA0001A0E36 /* Model */ = {
