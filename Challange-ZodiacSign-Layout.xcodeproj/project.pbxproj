@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6479A782C1505B1004E8FB9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6479A772C1505B1004E8FB9 /* Lato-Regular.ttf */; };
 		C64D62532C14B8EF001A0E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62522C14B8EF001A0E36 /* AppDelegate.swift */; };
 		C64D62552C14B8EF001A0E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */; };
 		C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62562C14B8EF001A0E36 /* ViewController.swift */; };
@@ -16,10 +17,20 @@
 		C64D626B2C14BAD3001A0E36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626A2C14BAD3001A0E36 /* SnapKit */; };
 		C64D626D2C14BAD3001A0E36 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */; };
 		C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D626E2C14BC1D001A0E36 /* Person.swift */; };
+		C64D62792C14CF47001A0E36 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62782C14CF47001A0E36 /* UIView+Extensions.swift */; };
+		C6BC08992C15F43500D4AF48 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */; };
+		C6BC089B2C15F54E00D4AF48 /* Lato-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */; };
+		C6BC089D2C15F87D00D4AF48 /* ZodiacAbode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */; };
+		C6BC089F2C15F89000D4AF48 /* ZodiacColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC089E2C15F89000D4AF48 /* ZodiacColor.swift */; };
+		C6BC08A12C15F8A000D4AF48 /* ZodiacStone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A02C15F8A000D4AF48 /* ZodiacStone.swift */; };
+		C6BC08A32C15F8BB00D4AF48 /* ZodiacElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A22C15F8BB00D4AF48 /* ZodiacElement.swift */; };
+		C6BC08A52C15F8C700D4AF48 /* ZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A42C15F8C700D4AF48 /* ZodiacSign.swift */; };
+		C6BC08A82C15FADB00D4AF48 /* ZodiacInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C64D624F2C14B8EF001A0E36 /* Challange-Module-9-Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challange-Module-9-Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6479A772C1505B1004E8FB9 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		C64D624F2C14B8EF001A0E36 /* Challange-ZodiacSign-Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challange-ZodiacSign-Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64D62522C14B8EF001A0E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C64D62562C14B8EF001A0E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +39,15 @@
 		C64D62602C14B8F0001A0E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C64D62672C14BAC1001A0E36 /* Zodiac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
 		C64D626E2C14BC1D001A0E36 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C64D62782C14CF47001A0E36 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiBold.ttf"; sourceTree = "<group>"; };
+		C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacAbode.swift; sourceTree = "<group>"; };
+		C6BC089E2C15F89000D4AF48 /* ZodiacColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacColor.swift; sourceTree = "<group>"; };
+		C6BC08A02C15F8A000D4AF48 /* ZodiacStone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacStone.swift; sourceTree = "<group>"; };
+		C6BC08A22C15F8BB00D4AF48 /* ZodiacElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacElement.swift; sourceTree = "<group>"; };
+		C6BC08A42C15F8C700D4AF48 /* ZodiacSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacSign.swift; sourceTree = "<group>"; };
+		C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6479A762C1505A5004E8FB9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */,
+				C6479A772C1505B1004E8FB9 /* Lato-Regular.ttf */,
+				C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C64D62462C14B8EF001A0E36 = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +84,7 @@
 		C64D62502C14B8EF001A0E36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C64D624F2C14B8EF001A0E36 /* Challange-Module-9-Layout.app */,
+				C64D624F2C14B8EF001A0E36 /* Challange-ZodiacSign-Layout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C64D62712C14C964001A0E36 /* Support */,
+				C64D62762C14CF2D001A0E36 /* Helpers */,
 				C64D62662C14BAA0001A0E36 /* Model */,
 				C64D62702C14C95A001A0E36 /* Screens */,
 				C64D62722C14C978001A0E36 /* Resources */,
@@ -74,7 +105,7 @@
 		C64D62662C14BAA0001A0E36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C64D62672C14BAC1001A0E36 /* Zodiac.swift */,
+				C6BC08A62C15F8DF00D4AF48 /* Zodiac */,
 				C64D626E2C14BC1D001A0E36 /* Person.swift */,
 			);
 			path = Model;
@@ -101,17 +132,48 @@
 		C64D62722C14C978001A0E36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6479A762C1505A5004E8FB9 /* Fonts */,
 				C64D625B2C14B8F0001A0E36 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		C64D62762C14CF2D001A0E36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C64D62772C14CF3C001A0E36 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C64D62772C14CF3C001A0E36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C64D62782C14CF47001A0E36 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C6BC08A62C15F8DF00D4AF48 /* Zodiac */ = {
+			isa = PBXGroup;
+			children = (
+				C64D62672C14BAC1001A0E36 /* Zodiac.swift */,
+				C6BC08A42C15F8C700D4AF48 /* ZodiacSign.swift */,
+				C6BC08A22C15F8BB00D4AF48 /* ZodiacElement.swift */,
+				C6BC08A02C15F8A000D4AF48 /* ZodiacStone.swift */,
+				C6BC089E2C15F89000D4AF48 /* ZodiacColor.swift */,
+				C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */,
+				C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */,
+			);
+			path = Zodiac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C64D624E2C14B8EF001A0E36 /* Challange-Module-9-Layout */ = {
+		C64D624E2C14B8EF001A0E36 /* Challange-ZodiacSign-Layout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C64D62632C14B8F0001A0E36 /* Build configuration list for PBXNativeTarget "Challange-Module-9-Layout" */;
+			buildConfigurationList = C64D62632C14B8F0001A0E36 /* Build configuration list for PBXNativeTarget "Challange-ZodiacSign-Layout" */;
 			buildPhases = (
 				C64D624B2C14B8EF001A0E36 /* Sources */,
 				C64D624C2C14B8EF001A0E36 /* Frameworks */,
@@ -121,13 +183,13 @@
 			);
 			dependencies = (
 			);
-			name = "Challange-Module-9-Layout";
+			name = "Challange-ZodiacSign-Layout";
 			packageProductDependencies = (
 				C64D626A2C14BAD3001A0E36 /* SnapKit */,
 				C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */,
 			);
 			productName = "Challange-Module-9-Layout";
-			productReference = C64D624F2C14B8EF001A0E36 /* Challange-Module-9-Layout.app */;
+			productReference = C64D624F2C14B8EF001A0E36 /* Challange-ZodiacSign-Layout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,7 +223,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C64D624E2C14B8EF001A0E36 /* Challange-Module-9-Layout */,
+				C64D624E2C14B8EF001A0E36 /* Challange-ZodiacSign-Layout */,
 			);
 		};
 /* End PBXProject section */
@@ -172,7 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C64D625C2C14B8F0001A0E36 /* Assets.xcassets in Resources */,
+				C6BC08992C15F43500D4AF48 /* Lato-Medium.ttf in Resources */,
+				C6479A782C1505B1004E8FB9 /* Lato-Regular.ttf in Resources */,
 				C64D625F2C14B8F0001A0E36 /* Base in Resources */,
+				C6BC089B2C15F54E00D4AF48 /* Lato-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,9 +248,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BC08A52C15F8C700D4AF48 /* ZodiacSign.swift in Sources */,
+				C6BC08A82C15FADB00D4AF48 /* ZodiacInfo.swift in Sources */,
+				C64D62792C14CF47001A0E36 /* UIView+Extensions.swift in Sources */,
+				C6BC08A12C15F8A000D4AF48 /* ZodiacStone.swift in Sources */,
+				C6BC08A32C15F8BB00D4AF48 /* ZodiacElement.swift in Sources */,
 				C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */,
 				C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */,
 				C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */,
+				C6BC089D2C15F87D00D4AF48 /* ZodiacAbode.swift in Sources */,
+				C6BC089F2C15F89000D4AF48 /* ZodiacColor.swift in Sources */,
 				C64D62532C14B8EF001A0E36 /* AppDelegate.swift in Sources */,
 				C64D62552C14B8EF001A0E36 /* SceneDelegate.swift in Sources */,
 			);
@@ -333,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69M929ZQ47;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Challange-Module-9-Layout/Info.plist";
+				INFOPLIST_FILE = "Challange-ZodiacSign-Layout/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -360,7 +432,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69M929ZQ47;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Challange-Module-9-Layout/Info.plist";
+				INFOPLIST_FILE = "Challange-ZodiacSign-Layout/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -390,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C64D62632C14B8F0001A0E36 /* Build configuration list for PBXNativeTarget "Challange-Module-9-Layout" */ = {
+		C64D62632C14B8F0001A0E36 /* Build configuration list for PBXNativeTarget "Challange-ZodiacSign-Layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C64D62642C14B8F0001A0E36 /* Debug */,
