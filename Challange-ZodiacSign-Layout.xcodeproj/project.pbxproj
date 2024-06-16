@@ -17,7 +17,12 @@
 		C64D626B2C14BAD3001A0E36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626A2C14BAD3001A0E36 /* SnapKit */; };
 		C64D626D2C14BAD3001A0E36 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */; };
 		C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D626E2C14BC1D001A0E36 /* Person.swift */; };
-		C64D62792C14CF47001A0E36 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62782C14CF47001A0E36 /* UIView+Extensions.swift */; };
+		C64D62792C14CF47001A0E36 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62782C14CF47001A0E36 /* UIView + Extensions.swift */; };
+		C6A1227F2C1F6DD8006338B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1227E2C1F6DD8006338B8 /* Constants.swift */; };
+		C6A122812C1F6E6B006338B8 /* UIButton + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A122802C1F6E6B006338B8 /* UIButton + Extensions.swift */; };
+		C6A122872C1F7851006338B8 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A122862C1F7851006338B8 /* UIStackView + Extensions.swift */; };
+		C6A122892C1F790E006338B8 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */; };
+		C6A1228B2C1F7DFA006338B8 /* UIImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */; };
 		C6BC08992C15F43500D4AF48 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */; };
 		C6BC089B2C15F54E00D4AF48 /* Lato-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */; };
 		C6BC089D2C15F87D00D4AF48 /* ZodiacAbode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */; };
@@ -39,7 +44,12 @@
 		C64D62602C14B8F0001A0E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C64D62672C14BAC1001A0E36 /* Zodiac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
 		C64D626E2C14BC1D001A0E36 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		C64D62782C14CF47001A0E36 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C64D62782C14CF47001A0E36 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		C6A1227E2C1F6DD8006338B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6A122802C1F6E6B006338B8 /* UIButton + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extensions.swift"; sourceTree = "<group>"; };
+		C6A122862C1F7851006338B8 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
+		C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extensions.swift"; sourceTree = "<group>"; };
 		C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 		C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiBold.ttf"; sourceTree = "<group>"; };
 		C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacAbode.swift; sourceTree = "<group>"; };
@@ -142,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C64D62772C14CF3C001A0E36 /* Extensions */,
+				C6A1227E2C1F6DD8006338B8 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -149,7 +160,11 @@
 		C64D62772C14CF3C001A0E36 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C64D62782C14CF47001A0E36 /* UIView+Extensions.swift */,
+				C64D62782C14CF47001A0E36 /* UIView + Extensions.swift */,
+				C6A122802C1F6E6B006338B8 /* UIButton + Extensions.swift */,
+				C6A122862C1F7851006338B8 /* UIStackView + Extensions.swift */,
+				C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */,
+				C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,15 +265,20 @@
 			files = (
 				C6BC08A52C15F8C700D4AF48 /* ZodiacSign.swift in Sources */,
 				C6BC08A82C15FADB00D4AF48 /* ZodiacInfo.swift in Sources */,
-				C64D62792C14CF47001A0E36 /* UIView+Extensions.swift in Sources */,
+				C64D62792C14CF47001A0E36 /* UIView + Extensions.swift in Sources */,
 				C6BC08A12C15F8A000D4AF48 /* ZodiacStone.swift in Sources */,
 				C6BC08A32C15F8BB00D4AF48 /* ZodiacElement.swift in Sources */,
 				C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */,
 				C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */,
+				C6A1227F2C1F6DD8006338B8 /* Constants.swift in Sources */,
+				C6A1228B2C1F7DFA006338B8 /* UIImageView + Extensions.swift in Sources */,
 				C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */,
+				C6A122812C1F6E6B006338B8 /* UIButton + Extensions.swift in Sources */,
 				C6BC089D2C15F87D00D4AF48 /* ZodiacAbode.swift in Sources */,
 				C6BC089F2C15F89000D4AF48 /* ZodiacColor.swift in Sources */,
 				C64D62532C14B8EF001A0E36 /* AppDelegate.swift in Sources */,
+				C6A122872C1F7851006338B8 /* UIStackView + Extensions.swift in Sources */,
+				C6A122892C1F790E006338B8 /* UILabel + Extensions.swift in Sources */,
 				C64D62552C14B8EF001A0E36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

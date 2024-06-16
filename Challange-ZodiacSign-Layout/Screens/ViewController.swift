@@ -11,7 +11,7 @@ import SnapKit
 class ViewController: UIViewController {
     
     // MARK: - UI
-    
+
     private lazy var containerView: UIView = {
         let view = UIView()
         
@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    // MARK: - Main Stack View
     
     lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
         return stackView
     }()
     
+    // MARK: - Header Stack View
+    
     private lazy var headerStackView: UIStackView = {
         let stackView = UIStackView()
         
@@ -43,53 +47,23 @@ class ViewController: UIViewController {
         return stackView
     }()
     
-    private lazy var heartButton: UIButton = {
-        let button = UIButton(type: .system)
-        
-        button.setImage(UIImage(resource: .heart), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+    private let heartButton = UIButton(image: .heart)
+    private let closeButton = UIButton(image: .close)
+    private let nameLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato400, size: 24)
+    )
     
-    private lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Regular", size: 24)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Fullname Stack View
     
-    private lazy var closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        
-        button.setImage(UIImage(resource: .close), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+    private let fullNameStackView = UIStackView(
+        axis: .vertical,
+        spacing: 14
+    )
     
-    private lazy var fullNameStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 14
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    // MARK: - Nami Image
     
-    private lazy var namiImageView: UIImageView = {
-        let view = UIImageView()
-        
-        view.image = UIImage(resource: .nami)
-        view.contentMode = .scaleAspectFit
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
-    }()
+    private let namiImageView = UIImageView(image: .nami)
     
     private lazy var fullNameView: UIView = {
         let view = UIView()
@@ -102,144 +76,84 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private lazy var fullNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Regular", size: 18)
-        label.textAlignment = .center
-        label.numberOfLines = 2
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let fullNameLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato400, size: 18),
+        alignment: .center,
+        numberOfLines: 2
+    )
     
-    private lazy var zodiacInfoStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    // MARK: - Zodiac Main Stack View
     
-    private lazy var zodiacLeftInfoStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 22
-        stackView.distribution = .equalSpacing
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let zodiacMainStackView = UIStackView(
+        axis: .horizontal,
+        alignment: .center
+    )
     
-    private lazy var zodiacSignStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    // MARK: - Zodiac Left Stack View
     
-    private lazy var zodiacSignLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacLeftInfoStackView = UIStackView(
+        axis: .vertical,
+        spacing: 22,
+        distribution: .equalSpacing
+    )
     
-    private lazy var zodiacSignNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Zodiac Sign Stack View
     
-    private lazy var zodiacElementStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let zodiacSignStackView = UIStackView(
+        axis: .vertical,
+        spacing: 3
+    )
     
-    private lazy var zodiacElementLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacSignLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14)
+    )
     
-    private lazy var zodiacElementNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacSignNameLabel = UILabel(
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14)
+    )
     
-    private lazy var personImageView: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(resource: .person)
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imageView
-    }()
+    // MARK: - Zodiac Element Stack View
     
-    private lazy var zodiacStoneStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let zodiacElementStackView = UIStackView(
+        axis: .vertical,
+        spacing: 3
+    )
     
-    private lazy var zodiacStoneLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacElementLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14)
+    )
     
-    private lazy var zodiacStoneNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacElementNameLabel = UILabel(
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14)
+    )
+    
+    // MARK: - Zodiac Stone Stack View
+    
+    private let zodiacStoneStackView = UIStackView(
+        axis: .vertical,
+        spacing: 3
+    )
+    
+    private let zodiacStoneLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14)
+    )
+    
+    private let zodiacStoneNameLabel = UILabel(
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14)
+    )
+    
+    // MARK: - Person Image
+    
+    private let personImageView = UIImageView(image: .person)
+    
+    // MARK: - Zodiac Right Stack View
     
     private lazy var zodiacRightInfoStackView: UIStackView = {
         let stackView = UIStackView()
@@ -691,8 +605,8 @@ class ViewController: UIViewController {
         fullNameStackView.addArrangedSubview(fullNameView)
         fullNameView.addSubview(fullNameLabel)
         
-        containerView.addSubview(zodiacInfoStackView)
-        zodiacInfoStackView.addArrangedSubview(zodiacLeftInfoStackView)
+        containerView.addSubview(zodiacMainStackView)
+        zodiacMainStackView.addArrangedSubview(zodiacLeftInfoStackView)
         
         zodiacLeftInfoStackView.addArrangedSubview(zodiacSignStackView)
         zodiacSignStackView.addArrangedSubview(zodiacSignLabel)
@@ -706,8 +620,8 @@ class ViewController: UIViewController {
         zodiacStoneStackView.addArrangedSubview(zodiacStoneLabel)
         zodiacStoneStackView.addArrangedSubview(zodiacStoneNameLabel)
         
-        zodiacInfoStackView.addArrangedSubview(personImageView)
-        zodiacInfoStackView.addArrangedSubview(zodiacRightInfoStackView)
+        zodiacMainStackView.addArrangedSubview(personImageView)
+        zodiacMainStackView.addArrangedSubview(zodiacRightInfoStackView)
         
         zodiacRightInfoStackView.addArrangedSubview(zodiacAscendantStackView)
         zodiacAscendantStackView.addArrangedSubview(zodiacAscendantLabel)
@@ -761,7 +675,7 @@ class ViewController: UIViewController {
         meaningOfNameStackView.addArrangedSubview(meaningOfNameTextLabel)
         
         let zodiac = Zodiac(sign: .aries)
-        person = Person(name: "Владислав", patronymic: "Витальевич", surname: "Снегирев", zodiac: zodiac)
+        person = Person(name: "Владислав", patronymic: "", surname: "", zodiac: zodiac)
     }
     
     private func configureUI() {
@@ -809,7 +723,7 @@ class ViewController: UIViewController {
         guard let person else { return }
         
         let patronymic = person.patronymic ?? ""
-        fullNameLabel.text = person.name + " " + patronymic + " " + person.surname
+        fullNameLabel.text = person.surname + " " + person.name + " " + patronymic
     }
     
     private func configureZodiacSignLabels() {
@@ -1009,7 +923,7 @@ extension ViewController {
     }
     
     private func setupZodiacInfoStackViewConstraints() {
-        zodiacInfoStackView.snp.makeConstraints { make in
+        zodiacMainStackView.snp.makeConstraints { make in
             make.top.equalTo(fullNameView.snp.bottom).offset(37)
             make.leading.trailing.equalTo(containerView).inset(28)
         }
@@ -1024,7 +938,7 @@ extension ViewController {
     
     private func setupCharacterTraitsStackViewConstraints() {
         characterTraitsStackView.snp.makeConstraints { make in
-            make.top.equalTo(zodiacInfoStackView.snp.bottom).offset(48)
+            make.top.equalTo(zodiacMainStackView.snp.bottom).offset(48)
             make.leading.trailing.equalTo(containerView).inset(22)
         }
     }

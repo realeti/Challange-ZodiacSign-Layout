@@ -1,5 +1,5 @@
 //
-//  UIView+Extensions.swift
+//  UIView + Extensions.swift
 //  Challange-ZodiacSign-Layout
 //
 //  Created by Apple M1 on 08.06.2024.
