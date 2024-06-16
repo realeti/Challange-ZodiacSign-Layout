@@ -8,7 +8,7 @@
 import UIKit
 
 extension UILabel {
-    convenience init(color: ColorResource, font: UIFont?, alignment: NSTextAlignment = .left, numberOfLines: Int = 0) {
+    convenience init(color: ColorResource, font: UIFont?, alignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
         self.init()
         
         self.textColor = UIColor(resource: color)

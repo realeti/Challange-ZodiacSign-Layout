@@ -37,15 +37,10 @@ class ViewController: UIViewController {
     
     // MARK: - Header Stack View
     
-    private lazy var headerStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let headerStackView = UIStackView(
+        axis: .horizontal,
+        distribution: .equalSpacing
+    )
     
     private let heartButton = UIButton(image: .heart)
     private let closeButton = UIButton(image: .close)
@@ -220,317 +215,154 @@ class ViewController: UIViewController {
     
     // MARK: - Character Traits Stack View
     
-    private lazy var characterTraitsStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 16
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let characterTraitsStackView = UIStackView(
+        axis: .vertical,
+        spacing: 16
+    )
     
-    private lazy var characterTraitsLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-SemiBold", size: 18)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let characterTraitsLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato600, size: 18),
+        alignment: .center
+    )
     
-    private lazy var traitsElementsStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .horizontal
-        stackView.spacing = 28
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    // MARK: - Traits Elements Stack View
     
-    private lazy var luckElementsStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 0
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let traitsElementsStackView = UIStackView(
+        axis: .horizontal,
+        spacing: 28,
+        distribution: .fillEqually
+    )
     
-    private lazy var luckLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Luck Elements Stack View
     
-    private lazy var emptyLuckView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let luckElementsStackView = UIStackView(axis: .vertical)
     
-    private lazy var luckProgressView: UIProgressView = {
-        let progressView = UIProgressView()
-        
-        progressView.progressTintColor = UIColor(resource: .darkRose)
-        progressView.trackTintColor = UIColor(resource: .darkRose).withAlphaComponent(0.3)
-        progressView.layer.cornerRadius = 12
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return progressView
-    }()
+    // MARK: - Luck elements
     
-    private lazy var emptyLuckProgressView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let luckLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14)
+    )
     
-    private lazy var luckProgressLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .fadingRose)
-        label.font = UIFont(name: "Lato-Regular", size: 13)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let emptyLuckView = UIView(backgroundColor: .clear)
+    private let luckProgressView = UIProgressView(
+        tintColor: .darkRose,
+        trackTintColor: .darkRose,
+        cornerRadius: 12
+    )
     
-    private lazy var kindnessElementsStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 0
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let emptyLuckProgressView = UIView(backgroundColor: .clear)
+    private let luckProgressLabel = UILabel(
+        color: .fadingRose,
+        font: UIFont(name: K.fontLato400, size: 13)
+    )
     
-    private lazy var kindnessLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Kindness Elements
     
-    private lazy var emptyKindnessView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let kindnessElementsStackView = UIStackView(axis: .vertical)
+    private let kindnessLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14)
+    )
     
-    private lazy var kindnessProgressView: UIProgressView = {
-        let progressView = UIProgressView()
-        
-        progressView.progressTintColor = UIColor(resource: .darkRose)
-        progressView.trackTintColor = UIColor(resource: .darkRose).withAlphaComponent(0.3)
-        progressView.layer.cornerRadius = 12
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return progressView
-    }()
+    private let emptyKindnessView = UIView(backgroundColor: .clear)
+    private let kindnessProgressView = UIProgressView(
+        tintColor: .darkRose,
+        trackTintColor: .darkRose,
+        cornerRadius: 12
+    )
     
-    private lazy var emptyKindnessProgressView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let emptyKindnessProgressView = UIView(backgroundColor: .clear)
+    private let kindnessProgressLabel = UILabel(
+        color: .fadingRose,
+        font: UIFont(name: K.fontLato400, size: 13)
+    )
     
-    private lazy var kindnessProgressLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .fadingRose)
-        label.font = UIFont(name: "Lato-Regular", size: 13)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Mind Elements
     
-    private lazy var mindElementsStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 0
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let mindElementsStackView = UIStackView(axis: .vertical)
+    private let mindLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14)
+    )
     
-    private lazy var mindLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let emptyMindView = UIView(backgroundColor: .clear)
+    private let mindProgressView = UIProgressView(
+        tintColor: .darkRose,
+        trackTintColor: .darkRose,
+        cornerRadius: 12
+    )
     
-    private lazy var emptyMindView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let emptyMindProgressView = UIView(backgroundColor: .clear)
+    private let mindProgressLabel = UILabel(
+        color: .fadingRose,
+        font: UIFont(name: K.fontLato400, size: 13)
+    )
     
-    private lazy var mindProgressView: UIProgressView = {
-        let progressView = UIProgressView()
-        
-        progressView.progressTintColor = UIColor(resource: .darkRose)
-        progressView.trackTintColor = UIColor(resource: .darkRose).withAlphaComponent(0.3)
-        progressView.layer.cornerRadius = 12
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return progressView
-    }()
+    // MARK: - Zodiac History Stack View
     
-    private lazy var emptyMindProgressView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let zodiacHistoryStackView = UIStackView(
+        axis: .vertical,
+        spacing: 36
+    )
     
-    private lazy var mindProgressLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .fadingRose)
-        label.font = UIFont(name: "Lato-Regular", size: 13)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Description Stack View
     
-    private lazy var zodiacHistoryStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 36
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let descriptionStackView = UIStackView(
+        axis: .vertical,
+        spacing: 12
+    )
     
-    private lazy var descriptionStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 12
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let descriptionLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato600, size: 18),
+        alignment: .center
+    )
     
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-SemiBold", size: 18)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let descriptionTextLabel = UILabel( // set as UITextField
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14),
+        numberOfLines: 0
+    )
     
-    private lazy var descriptionTextLabel: UILabel = { // set as UITextField
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Astrology Stack View
     
-    private lazy var meaningOfNameStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 12
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let astrologyStackView = UIStackView(
+        axis: .vertical,
+        spacing: 12
+    )
     
-    private lazy var meaningOfNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-SemiBold", size: 18)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let astrologyLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato600, size: 18),
+        alignment: .center
+    )
     
-    private lazy var meaningOfNameTextLabel: UILabel = { // set as UITextField
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let astrologyTextLabel = UILabel( // set as UITextField
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14),
+        numberOfLines: 0
+    )
     
-    private lazy var astrologyStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 12
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    // MARK: - Meaning Of Name Stack View
     
-    private lazy var astrologyLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-SemiBold", size: 18)
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let meaningOfNameStackView = UIStackView(
+        axis: .vertical,
+        spacing: 12
+    )
     
-    private lazy var astrologyTextLabel: UILabel = { // set as UITextField
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let meaningOfNameLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato600, size: 18),
+        alignment: .center
+    )
+    
+    private let meaningOfNameTextLabel = UILabel( // set as UITextField
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14),
+        numberOfLines: 0
+    )
     
     // MARK: - Life Cycle
 
@@ -553,19 +385,46 @@ class ViewController: UIViewController {
     private func setupUI() {
         view.addSubview(containerView)
         
+        setupHeaderStackView()
+        setupFullNameStackView()
+        setupZodiacMainStackView()
+        setupZodiacLeftStackView()
+        setupZodiacPersonImageView()
+        setupZodiacRightStackView()
+        setupCharacterTraitsStackView()
+        setupTraitsElementsStackView()
+        setupluckElementsStackView()
+        setupKindnessElementsStackView()
+        setupMindElementsStackView()
+        setupZodiacHistoryStackView()
+        setupDescriptionStackView()
+        setupAstrologyStackView()
+        setupMeaningOfNameStackView()
+        
+        let zodiac = Zodiac(sign: .aries)
+        person = Person(name: "Владислав", patronymic: "Витальевич", surname: "", zodiac: zodiac)
+    }
+    
+    private func setupHeaderStackView() {
         containerView.addSubview(headerStackView)
         headerStackView.addArrangedSubview(heartButton)
         headerStackView.addArrangedSubview(nameLabel)
         headerStackView.addArrangedSubview(closeButton)
-        
+    }
+    
+    private func setupFullNameStackView() {
         containerView.addSubview(fullNameStackView)
         fullNameStackView.addArrangedSubview(namiImageView)
         fullNameStackView.addArrangedSubview(fullNameView)
         fullNameView.addSubview(fullNameLabel)
-        
+    }
+    
+    private func setupZodiacMainStackView() {
         containerView.addSubview(zodiacMainStackView)
+    }
+    
+    private func setupZodiacLeftStackView() {
         zodiacMainStackView.addArrangedSubview(zodiacLeftInfoStackView)
-        
         zodiacLeftInfoStackView.addArrangedSubview(zodiacSignStackView)
         zodiacSignStackView.addArrangedSubview(zodiacSignLabel)
         zodiacSignStackView.addArrangedSubview(zodiacSignNameLabel)
@@ -577,8 +436,13 @@ class ViewController: UIViewController {
         zodiacLeftInfoStackView.addArrangedSubview(zodiacStoneStackView)
         zodiacStoneStackView.addArrangedSubview(zodiacStoneLabel)
         zodiacStoneStackView.addArrangedSubview(zodiacStoneNameLabel)
-        
+    }
+    
+    private func setupZodiacPersonImageView() {
         zodiacMainStackView.addArrangedSubview(personImageView)
+    }
+    
+    private func setupZodiacRightStackView() {
         zodiacMainStackView.addArrangedSubview(zodiacRightInfoStackView)
         
         zodiacRightInfoStackView.addArrangedSubview(zodiacAscendantStackView)
@@ -592,48 +456,64 @@ class ViewController: UIViewController {
         zodiacRightInfoStackView.addArrangedSubview(zodiacAbodeStackView)
         zodiacAbodeStackView.addArrangedSubview(zodiacAbodeLabel)
         zodiacAbodeStackView.addArrangedSubview(zodiacAbodeNameLabel)
-        
+    }
+    
+    private func setupCharacterTraitsStackView() {
         containerView.addSubview(characterTraitsStackView)
         characterTraitsStackView.addArrangedSubview(characterTraitsLabel)
+    }
+    
+    private func setupTraitsElementsStackView() {
         characterTraitsStackView.addArrangedSubview(traitsElementsStackView)
-        
+    }
+    
+    private func setupluckElementsStackView() {
         traitsElementsStackView.addArrangedSubview(luckElementsStackView)
         luckElementsStackView.addArrangedSubview(luckLabel)
         luckElementsStackView.addArrangedSubview(emptyLuckView)
         luckElementsStackView.addArrangedSubview(luckProgressView)
         luckElementsStackView.addArrangedSubview(emptyLuckProgressView)
         luckElementsStackView.addArrangedSubview(luckProgressLabel)
-        
+    }
+    
+    private func setupKindnessElementsStackView() {
         traitsElementsStackView.addArrangedSubview(kindnessElementsStackView)
         kindnessElementsStackView.addArrangedSubview(kindnessLabel)
         kindnessElementsStackView.addArrangedSubview(emptyKindnessView)
         kindnessElementsStackView.addArrangedSubview(kindnessProgressView)
         kindnessElementsStackView.addArrangedSubview(emptyKindnessProgressView)
         kindnessElementsStackView.addArrangedSubview(kindnessProgressLabel)
-        
+    }
+    
+    private func setupMindElementsStackView() {
         traitsElementsStackView.addArrangedSubview(mindElementsStackView)
         mindElementsStackView.addArrangedSubview(mindLabel)
         mindElementsStackView.addArrangedSubview(emptyMindView)
         mindElementsStackView.addArrangedSubview(mindProgressView)
         mindElementsStackView.addArrangedSubview(emptyMindProgressView)
         mindElementsStackView.addArrangedSubview(mindProgressLabel)
-        
+    }
+    
+    private func setupZodiacHistoryStackView() {
         containerView.addSubview(zodiacHistoryStackView)
-        
+    }
+    
+    private func setupDescriptionStackView() {
         zodiacHistoryStackView.addArrangedSubview(descriptionStackView)
         descriptionStackView.addArrangedSubview(descriptionLabel)
         descriptionStackView.addArrangedSubview(descriptionTextLabel)
-        
+    }
+    
+    private func setupAstrologyStackView() {
         zodiacHistoryStackView.addArrangedSubview(astrologyStackView)
         astrologyStackView.addArrangedSubview(astrologyLabel)
         astrologyStackView.addArrangedSubview(astrologyTextLabel)
-        
+    }
+    
+    private func setupMeaningOfNameStackView() {
         zodiacHistoryStackView.addArrangedSubview(meaningOfNameStackView)
         meaningOfNameStackView.addArrangedSubview(meaningOfNameLabel)
         meaningOfNameStackView.addArrangedSubview(meaningOfNameTextLabel)
-        
-        let zodiac = Zodiac(sign: .aries)
-        person = Person(name: "Владислав", patronymic: "", surname: "", zodiac: zodiac)
     }
     
     private func configureUI() {
@@ -687,59 +567,59 @@ class ViewController: UIViewController {
     private func configureZodiacSignLabels() {
         guard let person else { return }
         
-        zodiacSignLabel.text = "Знак зодиака"
+        zodiacSignLabel.text = K.zodiacSign
         zodiacSignNameLabel.text = person.zodiac.zodiacName
     }
     
     private func configureZodiacElementLabels() {
         guard let person else { return }
         
-        zodiacElementLabel.text = "Стихия"
+        zodiacElementLabel.text = K.zodiacElement
         zodiacElementNameLabel.text = person.zodiac.element
     }
     
     private func configureZodiacStoneLabels() {
         guard let person else { return }
         
-        zodiacStoneLabel.text = "Камень"
+        zodiacStoneLabel.text = K.zodiacStone
         zodiacStoneNameLabel.text = person.zodiac.stone
     }
     
     private func configureZodiacAscendantLabels() {
         guard let person else { return }
         
-        zodiacAscendantLabel.text = "Асцендент"
+        zodiacAscendantLabel.text = K.zodiacAscendant
         zodiacAscendantNameLabel.text = person.zodiac.ascendant
     }
     
     private func configureZodiacColorLabels() {
         guard let person else { return }
         
-        zodiacColorLabel.text = "Цвет"
+        zodiacColorLabel.text = K.zodiacColor
         zodiacColorNameLabel.text = person.zodiac.color
     }
     
     private func configureZodiacAbodeLabels() {
         guard let person else { return }
         
-        zodiacAbodeLabel.text = "Обитель"
+        zodiacAbodeLabel.text = K.zodiacAbode
         zodiacAbodeNameLabel.text = person.zodiac.abode
     }
     
     private func configureCharacterTraitsLabel() {
-        characterTraitsLabel.text = "Черты характера"
+        characterTraitsLabel.text = K.characterTraits
     }
     
     private func configureLuckLabel() {
-        luckLabel.text = "Удача"
+        luckLabel.text = K.luckTitle
     }
     
     private func configureKindnessLabel() {
-        kindnessLabel.text = "Доброта"
+        kindnessLabel.text = K.kindnessTitle
     }
     
     private func configureMindLabel() {
-        mindLabel.text = "Ум"
+        mindLabel.text = K.mindTitle
     }
     
     private func configureLuckProgress() {
@@ -782,7 +662,7 @@ class ViewController: UIViewController {
     }
     
     private func configureDescriptionLabel() {
-        descriptionLabel.text = "Описание"
+        descriptionLabel.text = K.descriptionTitle
     }
     
     private func configureDescriptionTextLabel() {
@@ -790,7 +670,7 @@ class ViewController: UIViewController {
     }
     
     private func configureAstrologyLabel() {
-        astrologyLabel.text = "Астрология"
+        astrologyLabel.text = K.astrologyTitle
     }
     
     private func configureAstrologyTextLabel() {
@@ -798,7 +678,7 @@ class ViewController: UIViewController {
     }
     
     private func configureMeaningOfNameLabel() {
-        meaningOfNameLabel.text = "Значение имени"
+        meaningOfNameLabel.text = K.meaningOfNameTitle
     }
     
     private func configureMeaningOfNameTextLabel() {

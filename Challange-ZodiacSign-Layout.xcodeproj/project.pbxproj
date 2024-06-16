@@ -23,6 +23,7 @@
 		C6A122872C1F7851006338B8 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A122862C1F7851006338B8 /* UIStackView + Extensions.swift */; };
 		C6A122892C1F790E006338B8 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */; };
 		C6A1228B2C1F7DFA006338B8 /* UIImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */; };
+		C6A1228D2C1F8AC9006338B8 /* UIProgressView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1228C2C1F8AC9006338B8 /* UIProgressView + Extensions.swift */; };
 		C6BC08992C15F43500D4AF48 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */; };
 		C6BC089B2C15F54E00D4AF48 /* Lato-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */; };
 		C6BC089D2C15F87D00D4AF48 /* ZodiacAbode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */; };
@@ -50,6 +51,7 @@
 		C6A122862C1F7851006338B8 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
 		C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 		C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extensions.swift"; sourceTree = "<group>"; };
+		C6A1228C2C1F8AC9006338B8 /* UIProgressView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIProgressView + Extensions.swift"; sourceTree = "<group>"; };
 		C6BC08982C15F43500D4AF48 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
 		C6BC089A2C15F54E00D4AF48 /* Lato-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiBold.ttf"; sourceTree = "<group>"; };
 		C6BC089C2C15F87D00D4AF48 /* ZodiacAbode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacAbode.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				C6A122862C1F7851006338B8 /* UIStackView + Extensions.swift */,
 				C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */,
 				C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */,
+				C6A1228C2C1F8AC9006338B8 /* UIProgressView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				C6BC08A52C15F8C700D4AF48 /* ZodiacSign.swift in Sources */,
 				C6BC08A82C15FADB00D4AF48 /* ZodiacInfo.swift in Sources */,
 				C64D62792C14CF47001A0E36 /* UIView + Extensions.swift in Sources */,
+				C6A1228D2C1F8AC9006338B8 /* UIProgressView + Extensions.swift in Sources */,
 				C6BC08A12C15F8A000D4AF48 /* ZodiacStone.swift in Sources */,
 				C6BC08A32C15F8BB00D4AF48 /* ZodiacElement.swift in Sources */,
 				C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */,

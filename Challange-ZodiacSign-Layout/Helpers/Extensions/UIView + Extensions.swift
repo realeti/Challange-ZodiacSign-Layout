@@ -15,3 +15,12 @@ extension UIView {
         self.layer.shadowRadius = 16
     }
 }
+
+extension UIView {
+    convenience init(backgroundColor: UIColor) {
+        self.init()
+        
+        self.backgroundColor = backgroundColor
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+}
