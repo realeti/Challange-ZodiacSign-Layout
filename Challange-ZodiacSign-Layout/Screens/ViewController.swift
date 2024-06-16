@@ -155,112 +155,70 @@ class ViewController: UIViewController {
     
     // MARK: - Zodiac Right Stack View
     
-    private lazy var zodiacRightInfoStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 22
-        stackView.distribution = .equalSpacing
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let zodiacRightInfoStackView = UIStackView(
+        axis: .vertical,
+        spacing: 22,
+        distribution: .equalSpacing
+    )
     
-    private lazy var zodiacAscendantStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    // MARK: - Zodiac Ascendant Stack View
     
-    private lazy var zodiacAscendantLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacAscendantStackView = UIStackView(
+        axis: .vertical,
+        spacing: 3
+    )
     
-    private lazy var zodiacAscendantNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacAscendantLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14),
+        alignment: .right
+    )
     
-    private lazy var zodiacColorStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let zodiacAscendantNameLabel = UILabel(
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14),
+        alignment: .right
+    )
     
-    private lazy var zodiacColorLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Zodiac Color Stack View
     
-    private lazy var zodiacColorNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacColorStackView = UIStackView(
+        axis: .vertical,
+        spacing: 3
+    )
     
-    private lazy var zodiacAbodeStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.spacing = 3
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+    private let zodiacColorLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14),
+        alignment: .right
+    )
     
-    private lazy var zodiacAbodeLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .dustyRose)
-        label.font = UIFont(name: "Lato-Medium", size: 14)
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    private let zodiacColorNameLabel = UILabel(
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14),
+        alignment: .right
+    )
     
-    private lazy var zodiacAbodeNameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.textColor = UIColor(resource: .jet)
-        label.font = UIFont(name: "Lato-Regular", size: 14)
-        label.textAlignment = .right
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Zodiac Abode Stack View
+    
+    private let zodiacAbodeStackView = UIStackView(
+        axis: .vertical,
+        spacing: 3
+    )
+    
+    private let zodiacAbodeLabel = UILabel(
+        color: .dustyRose,
+        font: UIFont(name: K.fontLato500, size: 14),
+        alignment: .right
+    )
+    
+    private let zodiacAbodeNameLabel = UILabel(
+        color: .jet,
+        font: UIFont(name: K.fontLato400, size: 14),
+        alignment: .right
+    )
+    
+    // MARK: - Character Traits Stack View
     
     private lazy var characterTraitsStackView: UIStackView = {
         let stackView = UIStackView()
