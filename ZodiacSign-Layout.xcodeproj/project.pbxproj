@@ -10,7 +10,7 @@
 		C6479A782C1505B1004E8FB9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6479A772C1505B1004E8FB9 /* Lato-Regular.ttf */; };
 		C64D62532C14B8EF001A0E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62522C14B8EF001A0E36 /* AppDelegate.swift */; };
 		C64D62552C14B8EF001A0E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */; };
-		C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62562C14B8EF001A0E36 /* ViewController.swift */; };
+		C64D62572C14B8EF001A0E36 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62562C14B8EF001A0E36 /* MainViewController.swift */; };
 		C64D625C2C14B8F0001A0E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64D625B2C14B8F0001A0E36 /* Assets.xcassets */; };
 		C64D625F2C14B8F0001A0E36 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C64D625E2C14B8F0001A0E36 /* Base */; };
 		C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62672C14BAC1001A0E36 /* Zodiac.swift */; };
@@ -39,7 +39,7 @@
 		C64D624F2C14B8EF001A0E36 /* ZodiacSign-Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZodiacSign-Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64D62522C14B8EF001A0E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64D62542C14B8EF001A0E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C64D62562C14B8EF001A0E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C64D62562C14B8EF001A0E36 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C64D625B2C14B8F0001A0E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64D625E2C14B8F0001A0E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C64D62602C14B8F0001A0E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 		C64D62702C14C95A001A0E36 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C6FB30862C20D1FF00278D7C /* MainViewController */,
 				C64D625D2C14B8F0001A0E36 /* LaunchScreen.storyboard */,
-				C64D62562C14B8EF001A0E36 /* ViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -185,6 +185,14 @@
 				C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */,
 			);
 			path = Zodiac;
+			sourceTree = "<group>";
+		};
+		C6FB30862C20D1FF00278D7C /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C64D62562C14B8EF001A0E36 /* MainViewController.swift */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +281,7 @@
 				C6BC08A12C15F8A000D4AF48 /* ZodiacStone.swift in Sources */,
 				C6BC08A32C15F8BB00D4AF48 /* ZodiacElement.swift in Sources */,
 				C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */,
-				C64D62572C14B8EF001A0E36 /* ViewController.swift in Sources */,
+				C64D62572C14B8EF001A0E36 /* MainViewController.swift in Sources */,
 				C6A1227F2C1F6DD8006338B8 /* Constants.swift in Sources */,
 				C6A1228B2C1F7DFA006338B8 /* UIImageView + Extensions.swift in Sources */,
 				C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */,

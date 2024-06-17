@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     // MARK: - UI
 
@@ -23,20 +23,6 @@ class ViewController: UIViewController {
     
     let scrollView = UIScrollView()
     let backgroundContentView = UIView()
-    
-    // MARK: - Main Stack View
-    
-    lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.layer.cornerRadius = 15
-        stackView.backgroundColor = .white
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
     
     // MARK: - Header Stack View
     
@@ -386,20 +372,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        
         setupUI()
         setupConstraints()
         configureUI()
-        
-        heartButton.addTarget(self, action: #selector(heartButtonPressed), for: .touchUpInside)
-        closeButton.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
     }
     
     // MARK: - Setup Views
     
     private func setupUI() {
+        view.backgroundColor = .white
         view.addSubview(contentView)
+        
         contentView.addSubview(scrollView)
         scrollView.addSubview(backgroundContentView)
         
@@ -424,6 +407,9 @@ class ViewController: UIViewController {
         
         let zodiac = Zodiac(sign: .aries)
         person = Person(name: "Владислав", patronymic: "Витальевич", surname: "", zodiac: zodiac)
+        
+        heartButton.addTarget(self, action: #selector(heartButtonPressed), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
     }
     
     private func setupHeaderStackView() {
@@ -548,9 +534,14 @@ class ViewController: UIViewController {
         meaningOfNameStackView.addArrangedSubview(meaningOfNameLabel)
         meaningOfNameStackView.addArrangedSubview(meaningOfNameTextView)
     }
+}
+
+extension MainViewController {
+    
+    // MARK: - Configure UI
     
     private func configureUI() {
-        configureContainerView()
+        configureContentView()
         configureScrollView()
         configureNameLabel()
         configureFullNameLabel()
@@ -576,7 +567,7 @@ class ViewController: UIViewController {
         configureAstrologyLabel()
     }
     
-    private func configureContainerView() {
+    private func configureContentView() {
         contentView.makeShadow(color: UIColor(resource: .peach))
     }
     
@@ -708,7 +699,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension MainViewController {
     
     // MARK: - Setup Constraints
     
@@ -905,6 +896,9 @@ extension ViewController {
             make.bottom.equalTo(backgroundContentView).offset(10)
         }
     }
+}
+
+extension MainViewController {
     
     // MARK: - Actions
     
