@@ -371,6 +371,16 @@ class ViewController: UIViewController {
         numberOfLines: 0
     )
     
+    // MARK: - Duck, Star, Bears Images View
+    
+    let duckImageView = UIImageView(image: .duck)
+    let starImageView = UIImageView(image: .stars)
+    let bearsImageView = UIImageView(image: .bears)
+    
+    // MARK: - Private Properties
+    
+    private var person: Person?
+    
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -381,12 +391,18 @@ class ViewController: UIViewController {
         setupUI()
         setupConstraints()
         configureUI()
-        personImageView.clipsToBounds = false
+        
+        heartButton.addTarget(self, action: #selector(heartButtonPressed), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
     }
     
-    // MARK: - Private Properties
+    @objc private func heartButtonPressed(_ sender: UIButton) {
+        print("press heart")
+    }
     
-    var person: Person?
+    @objc private func closeButtonPressed(_ sender: UIButton) {
+        print("press close")
+    }
     
     // MARK: - Setup Views
     
@@ -410,6 +426,9 @@ class ViewController: UIViewController {
         setupDescriptionStackView()
         setupAstrologyStackView()
         setupMeaningOfNameStackView()
+        setupDuckImageView()
+        setupStarImageView()
+        setupBearsImageView()
         
         let zodiac = Zodiac(sign: .aries)
         person = Person(name: "Владислав", patronymic: "Витальевич", surname: "", zodiac: zodiac)
@@ -508,6 +527,18 @@ class ViewController: UIViewController {
         backgroundContentView.addSubview(zodiacHistoryStackView)
     }
     
+    private func setupDuckImageView() {
+        backgroundContentView.addSubview(duckImageView)
+    }
+    
+    private func setupStarImageView() {
+        backgroundContentView.addSubview(starImageView)
+    }
+    
+    private func setupBearsImageView() {
+        backgroundContentView.addSubview(bearsImageView)
+    }
+    
     private func setupDescriptionStackView() {
         zodiacHistoryStackView.addArrangedSubview(descriptionStackView)
         descriptionStackView.addArrangedSubview(descriptionLabel)
@@ -528,6 +559,7 @@ class ViewController: UIViewController {
     
     private func configureUI() {
         configureContainerView()
+        configureScrollView()
         configureNameLabel()
         configureFullNameLabel()
         
@@ -559,6 +591,10 @@ class ViewController: UIViewController {
     
     private func configureContainerView() {
         contentView.makeShadow(color: UIColor(resource: .peach))
+    }
+    
+    private func configureScrollView() {
+        scrollView.bounces = false
     }
     
     private func configureNameLabel() {
@@ -721,6 +757,9 @@ extension ViewController {
         setupMindProgressViewConstraints()
         setupEmptyMindProgressViewConstraints()
         setupZodiacHistoryStackViewConstraints()
+        setupDuckImageConstraints()
+        setupStarImageConstraints()
+        setupBearsImageConstraints()
     }
     
     private func setupContainerConstraints() {
@@ -862,6 +901,32 @@ extension ViewController {
             make.top.equalTo(characterTraitsStackView.snp.bottom).offset(36)
             make.leading.trailing.equalTo(backgroundContentView).inset(25)
             make.bottom.equalTo(backgroundContentView).offset(-48)
+        }
+    }
+    
+    private func setupDuckImageConstraints() {
+        duckImageView.snp.makeConstraints { make in
+            make.width.equalTo(132)
+            make.height.equalTo(129.47)
+            make.leading.equalTo(contentView)
+            make.bottom.equalTo(astrologyTextLabel.snp.top)
+        }
+    }
+    
+    private func setupStarImageConstraints() {
+        starImageView.snp.makeConstraints { make in
+            make.width.height.equalTo(168)
+            make.trailing.equalTo(contentView)
+            make.bottom.equalTo(meaningOfNameTextLabel.snp.top).offset(13)
+        }
+    }
+    
+    private func setupBearsImageConstraints() {
+        bearsImageView.snp.makeConstraints { make in
+            make.width.equalTo(131)
+            make.height.equalTo(148.45)
+            make.leading.equalTo(contentView)
+            make.bottom.equalTo(backgroundContentView).offset(10)
         }
     }
 }

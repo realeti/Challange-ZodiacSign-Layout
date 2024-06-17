@@ -14,8 +14,6 @@
 		C64D625C2C14B8F0001A0E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64D625B2C14B8F0001A0E36 /* Assets.xcassets */; };
 		C64D625F2C14B8F0001A0E36 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C64D625E2C14B8F0001A0E36 /* Base */; };
 		C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62672C14BAC1001A0E36 /* Zodiac.swift */; };
-		C64D626B2C14BAD3001A0E36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626A2C14BAD3001A0E36 /* SnapKit */; };
-		C64D626D2C14BAD3001A0E36 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */; };
 		C64D626F2C14BC1D001A0E36 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D626E2C14BC1D001A0E36 /* Person.swift */; };
 		C64D62792C14CF47001A0E36 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D62782C14CF47001A0E36 /* UIView + Extensions.swift */; };
 		C6A1227F2C1F6DD8006338B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1227E2C1F6DD8006338B8 /* Constants.swift */; };
@@ -32,6 +30,7 @@
 		C6BC08A32C15F8BB00D4AF48 /* ZodiacElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A22C15F8BB00D4AF48 /* ZodiacElement.swift */; };
 		C6BC08A52C15F8C700D4AF48 /* ZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A42C15F8C700D4AF48 /* ZodiacSign.swift */; };
 		C6BC08A82C15FADB00D4AF48 /* ZodiacInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */; };
+		C6FB30822C20C1F300278D7C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6FB30812C20C1F300278D7C /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,8 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C64D626B2C14BAD3001A0E36 /* SnapKit in Frameworks */,
-				C64D626D2C14BAD3001A0E36 /* SnapKit-Dynamic in Frameworks */,
+				C6FB30822C20C1F300278D7C /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +201,7 @@
 			);
 			name = "Challange-ZodiacSign-Layout";
 			packageProductDependencies = (
-				C64D626A2C14BAD3001A0E36 /* SnapKit */,
-				C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */,
+				C6FB30812C20C1F300278D7C /* SnapKit */,
 			);
 			productName = "Challange-Module-9-Layout";
 			productReference = C64D624F2C14B8EF001A0E36 /* Challange-ZodiacSign-Layout.app */;
@@ -225,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "Challange-ZodiacSign-Layout" */;
+			buildConfigurationList = C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "ZodiacSign-Layout" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,7 +232,7 @@
 			);
 			mainGroup = C64D62462C14B8EF001A0E36;
 			packageReferences = (
-				C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C6FB30802C20C1F300278D7C /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = C64D62502C14B8EF001A0E36 /* Products */;
 			projectDirPath = "";
@@ -441,6 +438,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.uk-servers.Challange-Module-9-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,6 +469,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.uk-servers.Challange-Module-9-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,7 +482,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "Challange-ZodiacSign-Layout" */ = {
+		C64D624A2C14B8EF001A0E36 /* Build configuration list for PBXProject "ZodiacSign-Layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C64D62612C14B8F0001A0E36 /* Debug */,
@@ -498,7 +503,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		C6FB30802C20C1F300278D7C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -509,15 +514,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C64D626A2C14BAD3001A0E36 /* SnapKit */ = {
+		C6FB30812C20C1F300278D7C /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = C6FB30802C20C1F300278D7C /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		C64D626C2C14BAD3001A0E36 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C64D62692C14BAD3001A0E36 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
