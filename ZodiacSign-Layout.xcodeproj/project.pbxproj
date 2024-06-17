@@ -31,6 +31,7 @@
 		C6BC08A52C15F8C700D4AF48 /* ZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A42C15F8C700D4AF48 /* ZodiacSign.swift */; };
 		C6BC08A82C15FADB00D4AF48 /* ZodiacInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */; };
 		C6FB30822C20C1F300278D7C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6FB30812C20C1F300278D7C /* SnapKit */; };
+		C6FB30842C20CF4100278D7C /* UITextView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FB30832C20CF4100278D7C /* UITextView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		C6BC08A22C15F8BB00D4AF48 /* ZodiacElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacElement.swift; sourceTree = "<group>"; };
 		C6BC08A42C15F8C700D4AF48 /* ZodiacSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacSign.swift; sourceTree = "<group>"; };
 		C6BC08A72C15FADB00D4AF48 /* ZodiacInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacInfo.swift; sourceTree = "<group>"; };
+		C6FB30832C20CF4100278D7C /* UITextView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				C6A122882C1F790E006338B8 /* UILabel + Extensions.swift */,
 				C6A1228A2C1F7DFA006338B8 /* UIImageView + Extensions.swift */,
 				C6A1228C2C1F8AC9006338B8 /* UIProgressView + Extensions.swift */,
+				C6FB30832C20CF4100278D7C /* UITextView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				C6A1227F2C1F6DD8006338B8 /* Constants.swift in Sources */,
 				C6A1228B2C1F7DFA006338B8 /* UIImageView + Extensions.swift in Sources */,
 				C64D62682C14BAC1001A0E36 /* Zodiac.swift in Sources */,
+				C6FB30842C20CF4100278D7C /* UITextView + Extensions.swift in Sources */,
 				C6A122812C1F6E6B006338B8 /* UIButton + Extensions.swift in Sources */,
 				C6BC089D2C15F87D00D4AF48 /* ZodiacAbode.swift in Sources */,
 				C6BC089F2C15F89000D4AF48 /* ZodiacColor.swift in Sources */,

@@ -327,10 +327,10 @@ class ViewController: UIViewController {
         alignment: .center
     )
     
-    private let descriptionTextLabel = UILabel( // set as UITextField
-        color: .jet,
-        font: UIFont(name: K.fontLato400, size: 14),
-        numberOfLines: 0
+    private let descriptionTextView = UITextView(
+        text: K.descriptionText,
+        textColor: .jet,
+        font: UIFont(name: K.fontLato400, size: 14)
     )
     
     // MARK: - Astrology Stack View
@@ -346,10 +346,10 @@ class ViewController: UIViewController {
         alignment: .center
     )
     
-    private let astrologyTextLabel = UILabel( // set as UITextField
-        color: .jet,
-        font: UIFont(name: K.fontLato400, size: 14),
-        numberOfLines: 0
+    private let astrologyTextView = UITextView(
+        text: K.astrologyText,
+        textColor: .jet,
+        font: UIFont(name: K.fontLato400, size: 14)
     )
     
     // MARK: - Meaning Of Name Stack View
@@ -365,10 +365,10 @@ class ViewController: UIViewController {
         alignment: .center
     )
     
-    private let meaningOfNameTextLabel = UILabel( // set as UITextField
-        color: .jet,
-        font: UIFont(name: K.fontLato400, size: 14),
-        numberOfLines: 0
+    private let meaningOfNameTextView = UITextView(
+        text: K.meaningOfNameText,
+        textColor: .jet,
+        font: UIFont(name: K.fontLato400, size: 14)
     )
     
     // MARK: - Duck, Star, Bears Images View
@@ -394,14 +394,6 @@ class ViewController: UIViewController {
         
         heartButton.addTarget(self, action: #selector(heartButtonPressed), for: .touchUpInside)
         closeButton.addTarget(self, action: #selector(closeButtonPressed), for: .touchUpInside)
-    }
-    
-    @objc private func heartButtonPressed(_ sender: UIButton) {
-        print("press heart")
-    }
-    
-    @objc private func closeButtonPressed(_ sender: UIButton) {
-        print("press close")
     }
     
     // MARK: - Setup Views
@@ -542,19 +534,19 @@ class ViewController: UIViewController {
     private func setupDescriptionStackView() {
         zodiacHistoryStackView.addArrangedSubview(descriptionStackView)
         descriptionStackView.addArrangedSubview(descriptionLabel)
-        descriptionStackView.addArrangedSubview(descriptionTextLabel)
+        descriptionStackView.addArrangedSubview(descriptionTextView)
     }
     
     private func setupAstrologyStackView() {
         zodiacHistoryStackView.addArrangedSubview(astrologyStackView)
         astrologyStackView.addArrangedSubview(astrologyLabel)
-        astrologyStackView.addArrangedSubview(astrologyTextLabel)
+        astrologyStackView.addArrangedSubview(astrologyTextView)
     }
     
     private func setupMeaningOfNameStackView() {
         zodiacHistoryStackView.addArrangedSubview(meaningOfNameStackView)
         meaningOfNameStackView.addArrangedSubview(meaningOfNameLabel)
-        meaningOfNameStackView.addArrangedSubview(meaningOfNameTextLabel)
+        meaningOfNameStackView.addArrangedSubview(meaningOfNameTextView)
     }
     
     private func configureUI() {
@@ -580,13 +572,8 @@ class ViewController: UIViewController {
         configureMindProgress()
         
         configureDescriptionLabel()
-        configureDescriptionTextLabel()
-        
         configureMeaningOfNameLabel()
-        configureMeaningOfNameTextLabel()
-        
         configureAstrologyLabel()
-        configureAstrologyTextLabel()
     }
     
     private func configureContainerView() {
@@ -712,24 +699,12 @@ class ViewController: UIViewController {
         descriptionLabel.text = K.descriptionTitle
     }
     
-    private func configureDescriptionTextLabel() {
-        descriptionTextLabel.text = K.descriptionText
-    }
-    
     private func configureAstrologyLabel() {
         astrologyLabel.text = K.astrologyTitle
     }
     
-    private func configureAstrologyTextLabel() {
-        astrologyTextLabel.text = K.astrologyText
-    }
-    
     private func configureMeaningOfNameLabel() {
         meaningOfNameLabel.text = K.meaningOfNameTitle
-    }
-    
-    private func configureMeaningOfNameTextLabel() {
-        meaningOfNameTextLabel.text = K.meaningOfNameText
     }
 }
 
@@ -910,7 +885,7 @@ extension ViewController {
             make.width.equalTo(132)
             make.height.equalTo(129.47)
             make.leading.equalTo(contentView)
-            make.bottom.equalTo(astrologyTextLabel.snp.top)
+            make.bottom.equalTo(astrologyTextView.snp.top).offset(10)
         }
     }
     
@@ -918,7 +893,7 @@ extension ViewController {
         starImageView.snp.makeConstraints { make in
             make.width.height.equalTo(168)
             make.trailing.equalTo(contentView)
-            make.bottom.equalTo(meaningOfNameTextLabel.snp.top).offset(13)
+            make.bottom.equalTo(meaningOfNameTextView.snp.top).offset(13)
         }
     }
     
@@ -929,5 +904,15 @@ extension ViewController {
             make.leading.equalTo(contentView)
             make.bottom.equalTo(backgroundContentView).offset(10)
         }
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func heartButtonPressed(_ sender: UIButton) {
+        print("press heart")
+    }
+    
+    @objc private func closeButtonPressed(_ sender: UIButton) {
+        print("press close")
     }
 }
