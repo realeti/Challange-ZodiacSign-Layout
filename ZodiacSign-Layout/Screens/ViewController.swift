@@ -595,6 +595,7 @@ class ViewController: UIViewController {
     
     private func configureScrollView() {
         scrollView.bounces = false
+        scrollView.delaysContentTouches = false
     }
     
     private func configureNameLabel() {
