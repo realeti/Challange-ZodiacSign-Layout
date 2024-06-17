@@ -12,14 +12,17 @@ class ViewController: UIViewController {
     
     // MARK: - UI
 
-    private lazy var containerView: UIView = {
-        let view = UIView()
+    private lazy var contentView: UIView = {
+        let scrollView = UIView()
         
-        view.layer.cornerRadius = 15
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+        scrollView.layer.cornerRadius = 15
+        scrollView.backgroundColor = .white
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
     }()
+    
+    let scrollView = UIScrollView()
+    let backgroundContentView = UIView()
     
     // MARK: - Main Stack View
     
@@ -82,7 +85,8 @@ class ViewController: UIViewController {
     
     private let zodiacMainStackView = UIStackView(
         axis: .horizontal,
-        alignment: .center
+        alignment: .center,
+        distribution: .fillEqually
     )
     
     // MARK: - Zodiac Left Stack View
@@ -146,7 +150,10 @@ class ViewController: UIViewController {
     
     // MARK: - Person Image
     
-    private let personImageView = UIImageView(image: .person)
+    private let personImageView = UIImageView(
+        image: .person,
+        contentMode: .scaleAspectFill
+    )
     
     // MARK: - Zodiac Right Stack View
     
@@ -374,6 +381,7 @@ class ViewController: UIViewController {
         setupUI()
         setupConstraints()
         configureUI()
+        personImageView.clipsToBounds = false
     }
     
     // MARK: - Private Properties
@@ -383,7 +391,9 @@ class ViewController: UIViewController {
     // MARK: - Setup Views
     
     private func setupUI() {
-        view.addSubview(containerView)
+        view.addSubview(contentView)
+        contentView.addSubview(scrollView)
+        scrollView.addSubview(backgroundContentView)
         
         setupHeaderStackView()
         setupFullNameStackView()
@@ -406,21 +416,21 @@ class ViewController: UIViewController {
     }
     
     private func setupHeaderStackView() {
-        containerView.addSubview(headerStackView)
+        backgroundContentView.addSubview(headerStackView)
         headerStackView.addArrangedSubview(heartButton)
         headerStackView.addArrangedSubview(nameLabel)
         headerStackView.addArrangedSubview(closeButton)
     }
     
     private func setupFullNameStackView() {
-        containerView.addSubview(fullNameStackView)
+        backgroundContentView.addSubview(fullNameStackView)
         fullNameStackView.addArrangedSubview(namiImageView)
         fullNameStackView.addArrangedSubview(fullNameView)
         fullNameView.addSubview(fullNameLabel)
     }
     
     private func setupZodiacMainStackView() {
-        containerView.addSubview(zodiacMainStackView)
+        backgroundContentView.addSubview(zodiacMainStackView)
     }
     
     private func setupZodiacLeftStackView() {
@@ -459,7 +469,7 @@ class ViewController: UIViewController {
     }
     
     private func setupCharacterTraitsStackView() {
-        containerView.addSubview(characterTraitsStackView)
+        backgroundContentView.addSubview(characterTraitsStackView)
         characterTraitsStackView.addArrangedSubview(characterTraitsLabel)
     }
     
@@ -495,7 +505,7 @@ class ViewController: UIViewController {
     }
     
     private func setupZodiacHistoryStackView() {
-        containerView.addSubview(zodiacHistoryStackView)
+        backgroundContentView.addSubview(zodiacHistoryStackView)
     }
     
     private func setupDescriptionStackView() {
@@ -548,7 +558,7 @@ class ViewController: UIViewController {
     }
     
     private func configureContainerView() {
-        containerView.makeShadow(color: UIColor(resource: .peach))
+        contentView.makeShadow(color: UIColor(resource: .peach))
     }
     
     private func configureNameLabel() {
@@ -666,7 +676,7 @@ class ViewController: UIViewController {
     }
     
     private func configureDescriptionTextLabel() {
-        descriptionTextLabel.text = "Coming soon..."
+        descriptionTextLabel.text = K.descriptionText
     }
     
     private func configureAstrologyLabel() {
@@ -674,7 +684,7 @@ class ViewController: UIViewController {
     }
     
     private func configureAstrologyTextLabel() {
-        astrologyTextLabel.text = "Coming soon..."
+        astrologyTextLabel.text = K.astrologyText
     }
     
     private func configureMeaningOfNameLabel() {
@@ -682,7 +692,7 @@ class ViewController: UIViewController {
     }
     
     private func configureMeaningOfNameTextLabel() {
-        meaningOfNameTextLabel.text = "Coming soon..."
+        meaningOfNameTextLabel.text = K.meaningOfNameText
     }
 }
 
@@ -691,7 +701,7 @@ extension ViewController {
     // MARK: - Setup Constraints
     
     private func setupConstraints() {
-        setupContrainerView()
+        setupContainerConstraints()
         setupHeaderStackViewConstraints()
         setupHeartButtonConstraints()
         setupCloseButtonConstraints()
@@ -713,17 +723,26 @@ extension ViewController {
         setupZodiacHistoryStackViewConstraints()
     }
     
-    private func setupContrainerView() {
-        containerView.snp.makeConstraints { make in
+    private func setupContainerConstraints() {
+        contentView.snp.makeConstraints { make in
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(10)
             make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        backgroundContentView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.width.equalTo(contentView)
         }
     }
     
     private func setupHeaderStackViewConstraints() {
         headerStackView.snp.makeConstraints { make in
-            make.top.equalTo(containerView).inset(20)
-            make.leading.trailing.equalTo(containerView).inset(20)
+            make.top.equalTo(backgroundContentView).inset(20)
+            make.leading.trailing.equalTo(backgroundContentView).inset(20)
         }
     }
     
@@ -742,7 +761,7 @@ extension ViewController {
     private func setupFullNameStackViewConstraints() {
         fullNameStackView.snp.makeConstraints { make in
             make.top.equalTo(headerStackView.snp.bottom).offset(7)
-            make.leading.trailing.equalTo(containerView).inset(30)
+            make.leading.trailing.equalTo(backgroundContentView).inset(30)
         }
     }
     
@@ -763,7 +782,7 @@ extension ViewController {
     private func setupZodiacInfoStackViewConstraints() {
         zodiacMainStackView.snp.makeConstraints { make in
             make.top.equalTo(fullNameView.snp.bottom).offset(37)
-            make.leading.trailing.equalTo(containerView).inset(28)
+            make.leading.trailing.equalTo(backgroundContentView).inset(28)
         }
     }
     
@@ -777,7 +796,7 @@ extension ViewController {
     private func setupCharacterTraitsStackViewConstraints() {
         characterTraitsStackView.snp.makeConstraints { make in
             make.top.equalTo(zodiacMainStackView.snp.bottom).offset(48)
-            make.leading.trailing.equalTo(containerView).inset(22)
+            make.leading.trailing.equalTo(backgroundContentView).inset(22)
         }
     }
     
@@ -839,9 +858,10 @@ extension ViewController {
     }
     
     private func setupZodiacHistoryStackViewConstraints() {
-        descriptionStackView.snp.makeConstraints { make in
+        zodiacHistoryStackView.snp.makeConstraints { make in
             make.top.equalTo(characterTraitsStackView.snp.bottom).offset(36)
-            make.leading.trailing.equalTo(containerView).inset(25)
+            make.leading.trailing.equalTo(backgroundContentView).inset(25)
+            make.bottom.equalTo(backgroundContentView).offset(-48)
         }
     }
 }
