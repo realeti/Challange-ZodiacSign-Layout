@@ -574,6 +574,7 @@ extension MainViewController {
     private func configureScrollView() {
         scrollView.bounces = false
         scrollView.delaysContentTouches = false
+        scrollView.showsVerticalScrollIndicator = false
     }
     
     private func configureNameLabel() {
